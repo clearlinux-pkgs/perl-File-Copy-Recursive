@@ -4,13 +4,13 @@
 #
 Name     : perl-File-Copy-Recursive
 Version  : 0.44
-Release  : 4
-URL      : http://search.cpan.org/CPAN/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.44.tar.gz
-Source0  : http://search.cpan.org/CPAN/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.44.tar.gz
+Release  : 5
+URL      : https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.44.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.44.tar.gz
 Summary  : 'Perl extension for recursively copying files and directories'
 Group    : Development/Tools
 License  : Artistic-1.0 GPL-1.0
-Requires: perl-File-Copy-Recursive-doc
+Requires: perl-File-Copy-Recursive-man
 BuildRequires : perl(Path::Tiny)
 BuildRequires : perl(Test::Deep)
 BuildRequires : perl(Test::Fatal)
@@ -24,12 +24,12 @@ File/Copy/Recursive version 0.43
 This module has 3 functions, one to copy files only, one to copy directories
 only and one to do either depending on the argument's type.
 
-%package doc
-Summary: doc components for the perl-File-Copy-Recursive package.
-Group: Documentation
+%package man
+Summary: man components for the perl-File-Copy-Recursive package.
+Group: Default
 
-%description doc
-doc components for the perl-File-Copy-Recursive package.
+%description man
+man components for the perl-File-Copy-Recursive package.
 
 
 %prep
@@ -71,6 +71,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/lib/perl5/site_perl/5.26.1/File/Copy/Recursive.pm
 
-%files doc
+%files man
 %defattr(-,root,root,-)
-%doc /usr/share/man/man3/*
+/usr/share/man/man3/File::Copy::Recursive.3
