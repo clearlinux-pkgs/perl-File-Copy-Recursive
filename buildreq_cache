@@ -1,0 +1,7 @@
+0.44
+perl(Path::Tiny)
+perl(Test::Deep)
+perl(Test::Fatal)
+perl(Test::File)
+perl(Test::Warnings)
+perl(Try::Tiny)
