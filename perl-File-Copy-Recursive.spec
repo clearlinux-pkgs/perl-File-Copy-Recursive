@@ -4,7 +4,7 @@
 #
 Name     : perl-File-Copy-Recursive
 Version  : 0.44
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.44.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.44.tar.gz
 Summary  : 'Perl extension for recursively copying files and directories'
