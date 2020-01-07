@@ -4,12 +4,13 @@
 #
 Name     : perl-File-Copy-Recursive
 Version  : 0.45
-Release  : 17
+Release  : 18
 URL      : https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.45.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.45.tar.gz
-Summary  : Perl extension for recursively copying files and directories
+Summary  : 'Perl extension for recursively copying files and directories'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-File-Copy-Recursive-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Path::Tiny)
 BuildRequires : perl(Test::Deep)
@@ -29,14 +30,23 @@ Summary: dev components for the perl-File-Copy-Recursive package.
 Group: Development
 Provides: perl-File-Copy-Recursive-devel = %{version}-%{release}
 Requires: perl-File-Copy-Recursive = %{version}-%{release}
-Requires: perl-File-Copy-Recursive = %{version}-%{release}
 
 %description dev
 dev components for the perl-File-Copy-Recursive package.
 
 
+%package perl
+Summary: perl components for the perl-File-Copy-Recursive package.
+Group: Default
+Requires: perl-File-Copy-Recursive = %{version}-%{release}
+
+%description perl
+perl components for the perl-File-Copy-Recursive package.
+
+
 %prep
 %setup -q -n File-Copy-Recursive-0.45
+cd %{_builddir}/File-Copy-Recursive-0.45
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -72,8 +82,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/File/Copy/Recursive.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/File::Copy::Recursive.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/File/Copy/Recursive.pm
