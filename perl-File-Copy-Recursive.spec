@@ -4,7 +4,7 @@
 #
 Name     : perl-File-Copy-Recursive
 Version  : 0.45
-Release  : 20
+Release  : 21
 URL      : https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.45.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.45.tar.gz
 Summary  : 'Perl extension for recursively copying files and directories'
@@ -89,4 +89,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/File/Copy/Recursive.pm
+/usr/lib/perl5/vendor_perl/5.32.1/File/Copy/Recursive.pm
